@@ -2,6 +2,7 @@
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
+import plotly.graph_objs as go
 
 # static data
 weekday_in_order = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
@@ -27,16 +28,51 @@ app.layout = html.Div(children=[
 
     # append the visualization to the page
     dcc.Graph(
-        id='example-graph',
+        id='ex1-graph',
         figure={
             # configure the data
             'data': [
+                go.Bar(
+                x= weekday_in_order,
+                y= total_usage,
+                name='Total',
+                marker=go.bar.Marker(
+                    color='rgb(0, 0, 255)'
+                ),
+                go.Bar(
+                x= weekday_in_order,
+                y= ped_n,
+                name='Ped N',
+                marker=go.bar.Marker(
+                    color='rgb(255, 128, 0)'
+                ),
+                go.Bar(
+                x= weekday_in_order,
+                y= ped_s,
+                name='Ped S',
+                marker=go.bar.Marker(
+                    color='rgb(0, 153, 0)'
+                ),
+                go.Bar(
+                x= weekday_in_order,
+                y= bike_n,
+                name='Bike N',
+                marker=go.bar.Marker(
+                    color='rgb(255, 0, 0)'
+                ),
+                go.Bar(
+                x= weekday_in_order,
+                y= bike_s,
+                name='Bike S',
+                marker=go.bar.Marker(
+                    color='rgb(127, 0, 255)'
+                )
                 # set x to be weekday, and y to be the counts. We use bars to represent our data.
-                {'x': weekday_in_order, 'y': total_usage, 'type': 'bar', 'name': 'Total'},
-                {'x': weekday_in_order, 'y': ped_n, 'type': 'bar', 'name': 'Ped N'},
-                {'x': weekday_in_order, 'y': ped_s, 'type': 'bar', 'name': 'Ped S'},
-                {'x': weekday_in_order, 'y': bike_n, 'type': 'bar', 'name': 'Bike N'},
-                {'x': weekday_in_order, 'y': bike_s, 'type': 'bar', 'name': 'Bike S'},
+                # {'x': weekday_in_order, 'y': total_usage, 'type': 'bar', 'name': 'Total'},
+                # {'x': weekday_in_order, 'y': ped_n, 'type': 'bar', 'name': 'Ped N'},
+                # {'x': weekday_in_order, 'y': ped_s, 'type': 'bar', 'name': 'Ped S'},
+                # {'x': weekday_in_order, 'y': bike_n, 'type': 'bar', 'name': 'Bike N'},
+                # {'x': weekday_in_order, 'y': bike_s, 'type': 'bar', 'name': 'Bike S'},
 
             ],
             # configure the layout of the visualization --
