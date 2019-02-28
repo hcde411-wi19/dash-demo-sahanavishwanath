@@ -67,13 +67,6 @@ app.layout = html.Div(children=[
                 marker=go.bar.Marker(
                     color='rgb(127, 0, 255)'
                 )
-                # set x to be weekday, and y to be the counts. We use bars to represent our data.
-                # {'x': weekday_in_order, 'y': total_usage, 'type': 'bar', 'name': 'Total'},
-                # {'x': weekday_in_order, 'y': ped_n, 'type': 'bar', 'name': 'Ped N'},
-                # {'x': weekday_in_order, 'y': ped_s, 'type': 'bar', 'name': 'Ped S'},
-                # {'x': weekday_in_order, 'y': bike_n, 'type': 'bar', 'name': 'Bike N'},
-                # {'x': weekday_in_order, 'y': bike_s, 'type': 'bar', 'name': 'Bike S'},
-
             ],
             # configure the layout of the visualization --
             # set the title to be "Usage of the BGT North of NE 70th per week day"
