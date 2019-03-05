@@ -66,7 +66,7 @@ app.layout = html.Div(children=[
                 name='Bike S',
                 marker=go.bar.Marker(
                     color='rgb(127, 0, 255)'
-                ),
+                )
             ],
             # configure the layout of the visualization --
             # set the title to be "Usage of the BGT North of NE 70th per week day"
