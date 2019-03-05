@@ -75,10 +75,10 @@ app.layout = html.Div(children=[
             'data':
             #[total_usage_data, ped_n_data, ped_s_data, bike_n_data, bike_s_data],
             {'x': weekday_in_order, 'y': total_usage, 'type': 'bar', 'name': 'Total'},
-            {'x': weekday_in_order, 'y': ped_n, 'type': 'bar', 'name': 'Ped N'},
-            {'x': weekday_in_order, 'y': ped_s, 'type': 'bar', 'name': 'Ped S'},
-            {'x': weekday_in_order, 'y': bike_n, 'type': 'bar', 'name': 'Bike N'},
-            {'x': weekday_in_order, 'y': bike_s, 'type': 'bar', 'name': 'Bike S'},
+            #{'x': weekday_in_order, 'y': ped_n, 'type': 'bar', 'name': 'Ped N'},
+            #{'x': weekday_in_order, 'y': ped_s, 'type': 'bar', 'name': 'Ped S'},
+            #{'x': weekday_in_order, 'y': bike_n, 'type': 'bar', 'name': 'Bike N'},
+            #{'x': weekday_in_order, 'y': bike_s, 'type': 'bar', 'name': 'Bike S'},
 
             # configure the layout of the visualization --
             # set the title to be "Usage of the BGT North of NE 70th per week day"
