@@ -106,7 +106,7 @@ app.layout = html.Div(children=[
 
     # append the visualization to the page
     dcc.Graph(
-        id='example-graph',
+        id='exercise1-graph',
         figure={
             # configure the data
             'data': [
