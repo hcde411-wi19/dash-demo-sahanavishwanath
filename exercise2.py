@@ -10,7 +10,7 @@ app = dash.Dash(__name__, static_folder='static')
 df = pd.read_csv('static/Pokemon.csv')
 
 generations = df.groupby('Generation')
-legendary = df[['Legendary'] == True]
+legendary = df[df['Legendary'] == True]
 
 # set layout of the page
 app.layout = html.Div(children=[
@@ -25,19 +25,19 @@ app.layout = html.Div(children=[
 
     # append the visualization to the page
     dcc.Graph(
-        id='ex2-graph',
+        id='exercise2-graph',
         figure={
             # configure the data
             'data': [
                 # This is how we define a scatter plot. Note that it also uses "go.Scatter",
                 # but with the mode to be only "markers"
                 go.Scatter(
-                    x=generations['Attack'],
-                    y=generations['Defense'],
+                    x=legendary['Attack'],
+                    y=legendary['Defense'],
                     mode='markers',
-                    text=generations['Name'],  # This line sets the vehicle name as the points' labels.
+                    text=legendary['Name'],  # This line sets the vehicle name as the points' labels.
                     marker={
-                        'size': 10,
+                        'size': 5,
                         'opacity': 0.8  # By making the points a bit transparent, it can alleviate the occlusion issue
                     }
                 )
