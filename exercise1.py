@@ -16,6 +16,47 @@ bike_s = [52642, 50812, 51866, 50913, 49740, 71586, 68147]
 
 app = dash.Dash(__name__)
 
+
+total_usage_data = go.Bar(
+    x= weekday_in_order,
+    y= total_usage,
+    name='Total',
+    marker=go.bar.Marker(
+    color='rgb(0, 0, 255)'
+)
+
+ped_n_data = go.Bar(
+    x= weekday_in_order,
+    y= ped_n,
+    name='Ped N',
+    marker=go.bar.Marker(
+    color='rgb(255, 128, 0)'
+)
+
+ped_s_data = go.Bar(
+    x= weekday_in_order,
+    y= ped_s,
+    name='Ped S',
+    marker=go.bar.Marker(
+    color='rgb(0, 153, 0)'
+)
+
+bike_n_data = go.Bar(
+    x= weekday_in_order,
+    y= bike_n,
+    name='Bike N',
+    marker=go.bar.Marker(
+    color='rgb(255, 0, 0)'
+)
+
+bike_s_data = go.Bar(
+    x= weekday_in_order,
+    y= bike_s,
+    name='Bike S',
+    marker=go.bar.Marker(
+    color='rgb(127, 0, 255)'
+)
+
 # set up an layout
 app.layout = html.Div(children=[
     # H1 title on the page
@@ -31,47 +72,7 @@ app.layout = html.Div(children=[
         id='exercise1-graph',
         figure={
             # configure the data
-            'data': [
-                go.Bar(
-                x= weekday_in_order,
-                y= total_usage,
-                name='Total',
-                marker=go.bar.Marker(
-                color='rgb(0, 0, 255)'
-                ),
-
-                # go.Bar(
-                # x= weekday_in_order,
-                # y= ped_n,
-                # name='Ped N',
-                # marker=go.bar.Marker(
-                # color='rgb(255, 128, 0)'
-                # ),
-                #
-                # go.Bar(
-                # x= weekday_in_order,
-                # y= ped_s,
-                # name='Ped S',
-                # marker=go.bar.Marker(
-                # color='rgb(0, 153, 0)'
-                # ),
-                #
-                # go.Bar(
-                # x= weekday_in_order,
-                # y= bike_n,
-                # name='Bike N',
-                # marker=go.bar.Marker(
-                # color='rgb(255, 0, 0)'
-                # ),
-                #
-                # go.Bar(
-                # x= weekday_in_order,
-                # y= bike_s,
-                # name='Bike S',
-                # marker=go.bar.Marker(
-                # color='rgb(127, 0, 255)'
-                # )
-            ],
+            'data': [total_usage_data, ped_n_data, ped_s_data, bike_n_data, bike_s_data],
             # configure the layout of the visualization --
             # set the title to be "Usage of the BGT North of NE 70th per week day"
             'layout': {
