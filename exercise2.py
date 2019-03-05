@@ -10,6 +10,7 @@ app = dash.Dash(__name__, static_folder='static')
 df = pd.read_csv('static/Pokemon.csv')
 
 generations = df.groupby('Generation')
+legendary = df[['Legendary'] == True]
 
 # set layout of the page
 app.layout = html.Div(children=[
