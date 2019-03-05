@@ -37,37 +37,31 @@ app.layout = html.Div(children=[
                 x= weekday_in_order,
                 y= total_usage,
                 name='Total',
-                marker=go.bar.Marker(
-                    color='rgb(0, 0, 255)'
-                )),
+                ),
+
                 go.Bar(
                 x= weekday_in_order,
                 y= ped_n,
                 name='Ped N',
-                marker=go.bar.Marker(
-                    color='rgb(255, 128, 0)'
-                )),
+                ),
+
                 go.Bar(
                 x= weekday_in_order,
                 y= ped_s,
                 name='Ped S',
-                marker=go.bar.Marker(
-                    color='rgb(0, 153, 0)'
-                )),
+                ),
+
                 go.Bar(
                 x= weekday_in_order,
                 y= bike_n,
                 name='Bike N',
-                marker=go.bar.Marker(
-                    color='rgb(255, 0, 0)'
-                )),
+                ),
+                
                 go.Bar(
                 x= weekday_in_order,
                 y= bike_s,
                 name='Bike S',
-                marker=go.bar.Marker(
-                    color='rgb(127, 0, 255)'
-                ))
+                )
             ],
 
             # configure the layout of the visualization --
