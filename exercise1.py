@@ -33,9 +33,6 @@ app.layout = html.Div(children=[
         figure={
             # configure the data
             'data': [
-                        figure={
-            # configure the data
-            'data': [
                 go.Bar(
                 x= weekday_in_order,
                 y= total_usage,
