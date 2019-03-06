@@ -6,7 +6,7 @@ import plotly.graph_objs as go
 import pandas as pd
 
 # initialize Dash app and initialize the static folder
-app = dash.Dash(__name__, static_folder='static')
+app2 = dash.Dash(__name__, static_folder='static')
 df = pd.read_csv('static/Pokemon.csv')
 
 # filter for the Legendary Pokemon
@@ -21,7 +21,7 @@ gen5_leg = legendary[legendary['Generation'] == 5]
 gen6_leg = legendary[legendary['Generation'] == 6]
 
 # set layout of the page
-app.layout = html.Div(children=[
+app2.layout = html.Div(children=[
 
     # set the page heading
     html.H1(children='Exercise 2: Pokemon Scatter Plot'),
@@ -121,4 +121,4 @@ app.layout = html.Div(children=[
 ])
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app2.run_server(debug=True)
