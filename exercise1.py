@@ -14,11 +14,11 @@ bike_s = [52642, 50812, 51866, 50913, 49740, 71586, 68147]
 
 # initialize Dash environment
 
-app1 = dash.Dash(__name__)
+app = dash.Dash(__name__)
 
 
 # set up an layout
-app1.layout = html.Div(children=[
+app.layout = html.Div(children=[
     # H1 title on the page
     html.H1(children='Hello Dash for HCDE 411'),
 
@@ -76,4 +76,4 @@ app1.layout = html.Div(children=[
 
 if __name__ == '__main__':
     # start the Dash app
-    app1.run_server(debug=True)
+    app.run_server(debug=True)
